@@ -13,12 +13,120 @@ body {
 }
 
 
+.header {
+  padding-top: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-
-
-
+}
 .nav {
   /* background-color: aqua; */
+  overflow: auto;
+  /* margin: 2rem; */
+  padding-right:50px ;
+}
+
+.nav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding:1vw;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: font-size 0.3s;
+  border-right: 1px solid #f2f2f2;
+
+}
+
+.nav_contact {
+  border:none !important;
+}
+
+.nav a:hover {
+  font-size: 20px;
+  color: tomato;
+}
+
+
+
+
+.logo {
+  position: relative;
+  margin: 2vw;
+}
+
+.mobile_nav_btn {
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+.mobile_nav_icon {
+  color: #fff;
+  width: 5vw;
+  height: 5vw;
+}
+
+.mobile_nav_icon[name="close-outline"]{
+  display: none;
+}
+/* =======================================
+
+          RESPONSIVE NAV BAR CODE
+
+========================================= */
+
+@media(max-width:980px){
+  .mobile_nav_btn{
+    display: block;
+    z-index: 2;
+    border: 2px solid #fff;
+
+  }
+  .nav{
+    /* display: none; */
+    z-index: 1;
+    width: 100%;
+    height: 80vh;
+    background-color: #000;
+    position:absolute;
+    
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    
+  }
+  .nav a{
+    border: none;
+  }
+  .active .nav{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .active .mobile_nav_btn .mobile_nav_icon[name="close-outline"]{
+    display: block;
+  }
+  .active .mobile_nav_btn .mobile_nav_icon[name="menu-outline"]{
+    display: none;
+  }
+}
+
+
+
+/* .nav {
+  
   overflow: auto;
   margin: 2rem;
   padding-top: 1rem;
@@ -44,10 +152,7 @@ body {
   color: tomato;
 }
 
-/* .topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-} */
+
 
 header {
   display: flex;
@@ -57,7 +162,7 @@ header {
 .logo {
   margin: 2vw;
 
-}
+} */
 
 
 
@@ -290,7 +395,7 @@ header {
   font-weight: 400;
   padding: 12%;
   /* color: #f2f2f2; */
-  font-size: x-small;
+  font-size: small;
   text-align: left;
 }
 
@@ -308,7 +413,7 @@ header {
   text-decoration: none;
   color: black;
   /* font-weight: 400; */
-  font-size: x-small;
+  font-size: small;
 
 }
 
@@ -336,7 +441,7 @@ header {
 
 .project_flexitem h5 {
   font-weight: 400;
-  font-size: x-small;
+  font-size: small;
   padding-left: 4%;
 }
 
