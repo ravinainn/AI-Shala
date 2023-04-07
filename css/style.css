@@ -29,7 +29,9 @@
 
 
 
-/* NAVIGATION BAR */
+/*=========================================
+              NAVIGATION BAR 
+ ==========================================*/
 
 
 
@@ -96,7 +98,7 @@
 
 ========================================= */
 
-@media(max-width:980px){
+@media(max-width:780px){
   .mobile_nav_btn{
     display: block;
     z-index: 2;
@@ -144,25 +146,35 @@
 }
 
 
+/* ==================
 
+      Front PAGE 
+  
+  ====================== */
 
 .front {
-  padding-top: 10%;
-  width: 50%;
+  /* padding-top: 10%; */
+  position: relative;
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   
 }
 .brain{
-  width: 60vw;
-  position: relative;
-  left: 10vw;
+  width: 40vw;
+  position: absolute;
+  right: 1vw;
+  z-index:0;
 }
 
+
 .text {
-  padding: 10%;
+  padding: 5%;
+  width: 50vw;
   font-weight: 900;
   font-size: 2vw;
   color: white;
+  z-index: 2;
 }
 
 .text span {
@@ -204,10 +216,20 @@
   text-align: center;
 }
 
+/* @media(max-width:780px){
+  .brain{
+    
+  }
+} */
 
 
 
-/* ------OUR PARNTERS------------- */
+
+/* =========================================
+    
+              OUR PARNTERS
+
+  ========================================== */
 
 
 .container_partners {
@@ -226,12 +248,16 @@
 .slider {
 	background: white;
 	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-	height: 100px;
-	margin: auto;
+  
+  --slider_height:100px;
+	height: var(--slide_img_width);
+	
+  margin: auto;
 	overflow: hidden;
 	position: relative;
 	width: 72vw;
   border-radius: 20px;
+
   
 }
 
@@ -239,7 +265,7 @@
 .slider::after {
 	background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
 	content: "";
-	height: 100px;
+	height: var(--slide_img_width);
 	position: absolute;
 	width: 5vw;
 	z-index: 2;
@@ -260,11 +286,13 @@
 .slider .slide-track {
 	animation: scroll 20s linear infinite;
 	display: flex;
-  justify-content: space-between;
-	width: calc(250px * 7);
+  
+  align-items: center;
+  justify-content: space-around;
+	--slide_img_width:250px;
+  width: calc( var(--slide_img_width) * 7);
   
 
-  align-items: center;
   position: relative;
   top:10%;
 }
@@ -276,71 +304,31 @@
 
 @keyframes scroll {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 7)); }
+	100% { transform: translateX(calc(var(--slide_img_width) * -7)); }
 }
 
 
 
 
-  /* .container_partner {
-  background-color: #f2f2f2;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  overflow: hidden;
-}
-.partner_flex {
-  display: grid;
-  grid-auto-flow: column;
-  place-content: center;
-  gap: 3rem;
-}
-.partner_item{
-  background-color: white;
-  border-radius:50%;
-  align-items: center;
-}
-.kidzy img{
-  width: 2vw;
-}
-.partner_item img {
-  width: 200px;
-} */
+@media(max-width:600px){
+  .slide img {
+    height: 50px;
+    margin-top: 1rem;
+  }
+  .slider{
+    width: 80vw;
+  }
+  .slider .slide-track {
+    --slide_img_width: 150px;
+  }
 
-
-
-
-
-/*  .first_text {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-
-  border-radius: 10px;
-  color: #f2f2f2;
-  letter-spacing: 3px;
-  font-size: 2vw; 
-} */
-
-/* .first_text {
-  position: absolute;
-  top: 50%;
-  width:100%;
-  text-align: center;
+  /* neeche wale ko add krne ke baad animation slow hori hai  */
+  /* @keyframes scroll {
+    0% { transform: translateX(0); }
+	  100% { transform: translateX(calc(-150px * 7)); }
+  } */
   
-  letter-spacing: 3px;
-  font-weight: lighter;
-
-  font-size: 2vw;
-  color:#fff ;
-  text-transform: uppercase;   
 }
-.cont_text{
-  background-color: rgb(74, 74, 74);
-  padding:20px;
-} */
 
 
 
@@ -755,7 +743,7 @@ input:nth-of-type(7):checked ~ main#carousel {
 /* --------------- */
 
 .five{
-  padding:10rem;
+  padding-bottom:5% ;
   background-image: url(./Images/Background/stars.jpg);
   background-repeat: no-repeat;
   background-position: center;
