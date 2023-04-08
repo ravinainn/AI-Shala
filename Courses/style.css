@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;800;900&family=Roboto:wght@400&display=swap');
+
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -12,8 +16,13 @@ body {
   background-attachment: fixed;
 }
 
+/*=========================================
+              NAVIGATION BAR 
+ ==========================================*/
 
-.header {
+
+
+ .header {
   padding-top: 30px;
   position: relative;
   display: flex;
@@ -24,7 +33,7 @@ body {
 .nav {
   /* background-color: aqua; */
   overflow: auto;
-  /* margin: 2rem; */
+  margin: 2rem;
   padding-right:50px ;
 }
 
@@ -34,7 +43,7 @@ body {
   padding:1vw;
   text-decoration: none;
   font-size: 1rem;
-  transition: font-size 0.3s;
+  transition: all 0.3s;
   border-right: 1px solid #f2f2f2;
 
 }
@@ -44,13 +53,9 @@ body {
 }
 
 .nav a:hover {
-  font-size: 20px;
+  font-size: 1.2rem;
   color: tomato;
 }
-
-
-
-
 .logo {
   position: relative;
   margin: 2vw;
@@ -76,16 +81,16 @@ body {
 
 ========================================= */
 
-@media(max-width:980px){
+@media(max-width:780px){
   .mobile_nav_btn{
     display: block;
-    z-index: 2;
+    z-index: 5;
     border: 2px solid #fff;
 
   }
   .nav{
     /* display: none; */
-    z-index: 1;
+    z-index: 3;
     width: 100%;
     height: 80vh;
     background-color: #000;
@@ -123,46 +128,6 @@ body {
   }
 }
 
-
-
-/* .nav {
-  
-  overflow: auto;
-  margin: 2rem;
-  padding-top: 1rem;
-}
-
-.nav a {
-  color: #f2f2f2;
-
-  text-align: center;
-  padding: 0px 10px;
-  text-decoration: none;
-  font-size: 20px;
-  transition: font-size 0.3s;
-  border-right: 1px solid #f2f2f2;
-}
-
-#about {
-  border: none;
-}
-
-.nav a:hover {
-  font-size: 24px;
-  color: tomato;
-}
-
-
-
-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo {
-  margin: 2vw;
-
-} */
 
 
 
@@ -207,7 +172,8 @@ header {
 .courses-container h1{
   color: white;
   text-align: center;
-  font-size: 72px;
+  font-weight: 500;
+  font-size: 8vw;
   padding:0vw 10vw 6vw;
   
 }
@@ -242,14 +208,20 @@ header {
   background-color: #121212;
 
   overflow: hidden;
-
+  transition: all .3s;
   position: relative;
 }
+
 .courses-item_link:hover,
 .courses-item_link:hover .courses-item_content {
-  
   color: #FFF;
 }
+.courses-item_link:hover .courses-item_title, .courses-item_link:hover .courses-item_content .soon  {
+  color: #000;
+}
+/* .courses-item_link:hover .courses-item_content .soon {
+  color: tomato;
+} */
 
 .courses-item_link:hover .courses-item_bg {
   -webkit-transform: scale(10);
@@ -268,6 +240,7 @@ header {
 
   z-index: 2;
   position: relative;
+  transition: all .3s;
 }
 /* .courses-item_date-box {
   font-size: 18px;
@@ -284,7 +257,7 @@ header {
 
   -webkit-transition: color .5s ease;
   -o-transition: color .5s ease;
-  transition: color .5s ease;
+  transition: all .3s ease;
 }
 .courses-item_bg {
   height: 128px;
@@ -372,13 +345,19 @@ header {
 
 
 
+/* ------- Styling for Footer -------*/
+
 
 .footer {
   background-color: #FEFBF6;
   width: 100%;
+  overflow: hidden;
   /* height: 400px; */
   display: flex;
-  overflow: hidden;
+  justify-content: space-evenly;
+  
+  align-items: center;
+
 
 }
 
@@ -386,39 +365,39 @@ header {
 .ai,
 .contact,
 .project {
-  width: 25vw;
+  width: 15rem;
   padding: 6% 1%;
   font-weight: 400;
 }
 
 .ai p {
   font-weight: 400;
+  font-size:1vw;
   padding: 12%;
-  /* color: #f2f2f2; */
-  font-size: small;
   text-align: left;
 }
 
 .quick {
   padding-left: 2%;
+
 }
 
 
 .quick ul {
   list-style-type: none;
-
+  padding-top: 4%;
 }
 
 .quick ul li a {
   text-decoration: none;
   color: black;
   /* font-weight: 400; */
-  font-size: small;
+  font-size: 1vw;
 
 }
 
 .footer h3 {
-
+  font-size: 1.6vw;
   color: tomato;
   font-weight: 400;
 }
@@ -441,7 +420,7 @@ header {
 
 .project_flexitem h5 {
   font-weight: 400;
-  font-size: small;
+  font-size: 1vw;
   padding-left: 4%;
 }
 
@@ -463,5 +442,6 @@ header {
 }
 
 .contact_item h5 {
-  font-weight: 100;
+  font-weight: 400;
+  font-size: 1vw;
 }
