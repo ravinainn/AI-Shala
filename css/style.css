@@ -22,7 +22,7 @@
   background-size: cover;
   background-attachment: fixed;
   overflow: hidden;
-
+  
 }
 
 
@@ -234,18 +234,19 @@
 	padding: 5vh 0;
   min-height:50vh ;
   align-items: center;
-	background: #f2f2f2;
+	background: #171717;
 	display: flex;
   justify-content: space-between;
 	flex-direction: column;
 }
 .partners_text h1{
+  color: white;
   font-size: 5rem;
   font-weight: 500;
 }
 
 .slider {
-	background: white;
+	background: #f2f2f2;
 	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
   margin: auto;
 	overflow: hidden;
@@ -264,7 +265,7 @@
 	position: absolute;
 	width: 5vw;
 	z-index: 3;
-  
+  border-radius: 20px;
 }
 
 .slider::after {
@@ -419,7 +420,65 @@
   
   ================================================= */
 
+.features {
+  background-image: url(./Images/Background/stars.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color:#f2f2f2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 10rem;
+}
+.features h2 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+  padding-bottom: 3rem;
+}
 
+.features_container {
+  display: flex;
+  gap: 2rem;
+
+}
+
+.card {
+  /* background-color:#ff2c06; */
+  border: 1px solid white;
+  box-shadow: 3px 4px 8px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  
+  display: flex;
+  padding: 2%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content:start;
+  flex-wrap: wrap;
+  width: 300px;
+}
+.card img {
+  width: 15vw;
+  height: 12vw;
+  padding: .5rem;
+}
+.card h3 {
+  color: tomato;
+  font-weight: 600;
+  font-size: 1.4vw;
+  padding: 1rem 0;
+}
+.card p {
+  color: #FEFBF3;
+  font-weight: 500;
+  font-size: .9vw;
+  padding-bottom: .5rem ;
+}
+ 
 /* @import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&display=swap"); */
 
@@ -432,15 +491,14 @@
   
 } */
 
-.body1 {
+/* .body1 {
   --color: black;
   --bgColor: white;
-  /* min-height: 100vh; */
+
   display: grid;
   align-content: center;
   gap: 2rem;
   padding: 2rem;
-  /* font-family: "Exo 2", sans-serif; */
   color: var(--color);
   background: var(--bgColor);
 }
@@ -514,17 +572,14 @@ ol li:hover::after{
   content: "";
   filter:drop-shadow(-0.25rem 0.25rem 0.0675rem rgba(0,0,0, 0.75)) blur(2px);
 }
-/* ol li:hover::before ,ol li:hover{
-  color: tomato;
-  width: 18.5rem;
-} */
+
 ol li:hover{
   width: 18.2rem;
   color: tomato;
 }
 
 ol li > * { width: 7.5rem }
-/* ol li .icon { font-size: 2rem; color: var(--accent-color); text-align: center } */
+
 ol li .title { 
   font-size: 1.3rem; 
   font-weight: 500 
@@ -535,7 +590,7 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
   .body1 h2 {
     font-size: 3rem;
   }
-}
+} */
 
 /* .credits { margin-top: 2rem; text-align: right }
 .credits a { color: var(--color) } */
@@ -569,7 +624,132 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
 ==========================================*/
 
 
-.four{
+.courses {
+  background-image: url(./Images/Background/stars.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  padding: 2rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+
+.courses h1 {
+  color: #f2f2f2;
+  font-size: 4vw;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.courses_content {
+
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  
+
+}
+
+
+.courses_list {
+  border-radius: 25px;
+  border: 1px solid tomato;
+  list-style: none;
+  margin-left: 1.5rem;
+  padding: .5rem;
+  width: 23vw;
+  background-color: #171717;
+}
+
+.courses_list li {
+  font-weight: 300;
+  font-size: 1.2vw;
+  padding: 1rem;
+  color: white;
+  border-bottom: 1px  tomato;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.courses_list li:hover {
+  background-color: tomato;
+  
+
+}
+
+.description {
+  height: 80vh;
+  width: 60vw;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  padding: 4rem 1rem;
+  background-color: transparent;
+  color: white;
+  border: 2px solid tomato;
+  border-radius: 25px;
+}
+
+
+
+.description h2 {
+
+  font: white;
+  text-align: center;
+  color: tomato;
+  font-size: 2.4vw;
+  font-weight: 600;
+}
+
+.description p {
+  padding: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1.2vw;
+}
+
+.description h3 {
+  color: tomato;
+  padding-left: 1.5rem;
+  font-size:1.5vw ;
+  font-weight: 600;
+}
+
+.course_benefits {
+  padding: .5rem 3rem;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1.2vw;
+}
+
+.description a {
+  text-align: end;
+  padding-right: 3.6rem;
+
+}
+
+.description a button {
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: tomato;
+}
+
+.description button:hover {
+  background-color: #ff2c06;
+}
+
+/* .four{
 
   padding: 50px 10px 0px;
   background-image: url(./Images/Background/stars.jpg);
@@ -758,7 +938,7 @@ input:nth-of-type(7) {
 }
 input:nth-of-type(7):checked ~ main#carousel {
   --position: 7;
-}
+} */
 
 
 
@@ -770,7 +950,7 @@ input:nth-of-type(7):checked ~ main#carousel {
 
 ======================================= */
 
-.five{
+/* .five{
   padding-bottom:5% ;
   background-image: url(./Images/Background/stars.jpg);
   background-repeat: no-repeat;
@@ -795,15 +975,11 @@ input:nth-of-type(7):checked ~ main#carousel {
 
 .five_grid {
   
-  /* margin: 2rem; */
+
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  /* display: grid;
-  grid-auto-flow: column;
   
-  grid-template-columns: repeat(auto-fill,200px);
-  gap: 3rem; */
 }
 
 
@@ -812,7 +988,7 @@ figure {
   border-radius: 1rem;
   overflow: hidden;
   cursor: pointer;
-  /* min-width: rem; */
+
 }
 figure img {
   width: 18rem;
@@ -827,10 +1003,7 @@ figure figcaption h5 span{
   font-size: small;
   color: #f2f2f2;
 }
-/* 
-figure figcaption h5 {
-  color: #f2f2f2;
-} */
+
 
 figure figcaption {
   display: grid;
@@ -859,16 +1032,8 @@ figure:hover img {
    mask: none;
    color: #fff;
   }
-}
-
-/* body {
-  margin: 0;
-  min-height: 100vh;
-  display: grid;
-  grid-auto-flow: column;
-  place-content: center;
-  background: #425a52;
 } */
+
 
 /* --------------------------- */
 
@@ -981,27 +1146,3 @@ figure:hover img {
   font-weight: 400;
   font-size: 1vw;
 }
-
-
-
-
-/* --------BACKGROUND IMAGE---------- 
-
-
-  background-image: url(./Images/Background/stars.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  overflow: hidden;
-
-
-
-*/
-
-
-
-
-
-
-
